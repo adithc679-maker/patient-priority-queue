@@ -1,0 +1,22 @@
+COMPARISON AND COMPLEXITY ANALYSIS
+
+Observed on this input (n=7), using the supplied C program's counting convention:
+- Heap Sort: 21 element comparisons, 18 swaps.
+- Quick Sort: 12 pivot comparisons, 6 swaps.
+The exact counts depend on implementation details and pivot selection, so these observed values are for this implementation/input only.
+
+| Criterion | Max Heap / Priority Queue | Heap Sort | Quick Sort |
+|---|---|---|---|
+| Main purpose | Dynamic priority management | Full sorting | Full sorting |
+| Structure | Complete binary tree; max at root | Same heap structure during sorting | Partitioned array; no heap |
+| Height (n=7) | 2 edges | 2 while heap is active | Not applicable as heap height |
+| Insert | O(log n) | Not its purpose | Not its purpose |
+| Highest-priority access | O(1) at root | Not maintained after sorting | Requires sorted/processed data |
+| Delete highest priority | O(log n) | Not dynamic | Not directly supported |
+| Build | O(n) if heap-built; O(n log n) by repeated insertion | O(n) heap construction | O(n) partitioning only in special cases |
+| Sorting | Not required | O(n log n) worst/average/best | O(n log n) average; O(n^2) worst |
+| Extra space | O(n) to store heap; O(1) auxiliary per insertion | O(1) auxiliary (in-place array) | O(log n) average recursion; O(n) worst recursion |
+| Dynamic insert + immediate max | Directly supported | Not suitable | Not suitable |
+
+Most suitable for the hospital scenario: Max Heap / Priority Queue.
+Reason: each new patient's severity can be inserted in O(log n), while the highest-severity patient is always at the root and can be accessed immediately in O(1). Removing that patient takes O(log n). Sorting the entire collection after every insertion would add unnecessary work.

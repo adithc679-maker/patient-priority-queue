@@ -1,0 +1,30 @@
+PATIENT SEVERITY SCORES
+45 72 30 90 65 50 85
+
+A) MAX HEAP INSERTION
+Insert 45: 45
+Insert 72: 72 45
+Insert 30: 72 45 30
+Insert 90: 90 72 30 45
+Insert 65: 90 72 30 45 65
+Insert 50: 90 72 50 45 65 30
+Insert 85: 90 72 85 45 65 30 50
+
+B1) HEAP SORT (max heap, in-place)
+Initial max heap: 90 72 85 45 65 50 30
+After placing 90: 85 72 50 45 65 30 90
+After placing 85: 72 65 50 45 30 85 90
+After placing 72: 65 45 50 30 72 85 90
+After placing 65: 50 45 30 65 72 85 90
+After placing 50: 45 30 50 65 72 85 90
+After placing 45: 30 45 50 65 72 85 90
+Final Heap Sort: 30 45 50 65 72 85 90
+Heap Sort comparisons=21, swaps=18
+
+B2) QUICK SORT (Lomuto, last-element pivot)
+Partition [0..6], pivot=85 -> 45 72 30 65 50 85 90
+Partition [0..4], pivot=50 -> 45 30 50 65 72 85 90
+Partition [0..1], pivot=30 -> 30 45 50 65 72 85 90
+Partition [3..4], pivot=72 -> 30 45 50 65 72 85 90
+Final Quick Sort: 30 45 50 65 72 85 90
+Quick Sort comparisons=12, swaps=6
