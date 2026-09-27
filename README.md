@@ -317,72 +317,9 @@ Heap Sort and Quick Sort are useful when the requirement is to sort a fixed coll
 
 Hence, for the stated hospital scenario, the recommended data structure based on the required operations is a **Max Heap Priority Queue**.
 
----
 
-## 14. Files Included in This Repository
 
-```text
-Hospital-Patient-Priority-Queue/
-│
-├── patient_priority_assignment.c
-├── input.txt
-├── output.txt
-├── trace_table.txt
-├── comparison.txt
-└── README.md
-```
-
-### File descriptions
-
-**patient_priority_assignment.c**  
-Contains the C implementation of Max Heap insertion, Heap Sort and Quick Sort.
-
-**input.txt**  
-Contains the given patient severity scores.
-
-**output.txt**  
-Contains the execution output of the C program.
-
-**trace_table.txt**  
-Contains important intermediate steps of heap insertion and sorting.
-
-**comparison.txt**  
-Contains complexity and performance comparisons.
-
-**README.md**  
-Contains the complete description of the problem, algorithms, results, complexity analysis and conclusion.
-
----
-
-## 15. How to Compile and Run
-
-### Using GCC
-
-Open a terminal in the project directory and run:
-
-```bash
-gcc patient_priority_assignment.c -o patient_priority_assignment
-```
-
-Then run:
-
-### Windows
-
-```powershell
-.\patient_priority_assignment.exe
-```
-
-### Linux/macOS
-
-```bash
-./patient_priority_assignment
-```
-
-The program displays the Max Heap insertion steps, Heap Sort steps, Quick Sort partition steps and final results.
-
----
-
-## 16. Expected Final Output
+## 14. Expected Final Output
 
 Both sorting algorithms produce the same sorted sequence:
 
@@ -396,26 +333,3 @@ The final Max Heap for the priority queue is:
 90 72 85 45 65 30 50
 ```
 
----
-
-## 17. GitHub Submission
-
-The complete project should be uploaded to a GitHub repository.
-
-Suggested repository name:
-
-```text
-Hospital-Patient-Priority-Queue
-```
-
-The repository should contain:
-
-- Source code
-- Input data
-- Execution output
-- Trace table
-- Complexity analysis
-- Comparison table
-- Final conclusion
-
-After uploading all files, copy the GitHub repository URL and submit it as the assignment submission link.
